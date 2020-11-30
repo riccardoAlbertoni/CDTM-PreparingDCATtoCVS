@@ -1,0 +1,35 @@
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+# More readable version of datasets
+SELECT  ?uri ?D_title  ?D_description ?D_creator_identifier ?D_creator_name  ?D_accrualPeriodicity ?D_identifier ?D_issued ?D_keyword ?D_theme  ?D_modified  ?D_publisher_identifier ?D_publisher_name ?D_rightsHolder_identifier ?D_rightsHolder_name  ?D_contactPoint_fn (STR(?D_contactPoint_hasEmail_nonorm) AS ?D_contactPoint_hasEmail)  ?D_distribution ?D_landingPage WHERE {
+  ?uri a dcat:Dataset ;
+   dct:title ?D_title ;
+   dct:description ?D_description;
+   dct:creator ?D_creator. 
+    	?D_creator  dct:identifier ?D_creator_identifier ;
+            foaf:name ?D_creator_name . 
+   ?uri dct:accrualPeriodicity ?D_accrualPeriodicity ;
+   dct:identifier ?D_identifier ;
+   dct:issued ?D_issued;
+   dcat:keyword ?D_keyword;
+   dcat:theme ?D_theme ;
+   dct:modified ?D_modified ;
+   dct:publisher  ?D_publisher.
+  	 ?D_publisher  dct:identifier ?D_publisher_identifier ;
+            foaf:name ?D_publisher_name . 
+   ?uri dct:rightsHolder ?D_rightsHolder.
+      ?D_rightsHolder  dct:identifier ?D_rightsHolder_identifier ;
+            foaf:name ?D_rightsHolder_name . 
+   ?uri dct:spatial ?D_spatial;
+   dct:language  ?D_language ;
+   dcat:contactPoint ?D_contactPoint .
+    ?D_contactPoint vcard:fn ?D_contactPoint_fn . 
+    ?D_contactPoint  vcard:hasEmail ?D_contactPoint_hasEmail_nonorm .
+    ?uri dcat:distribution ?D_distribution;
+   dcat:landingPage ?D_landingPage ;
+   
+}
