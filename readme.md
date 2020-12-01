@@ -2,10 +2,10 @@
 The open data Matera Web Portal, http://dati.comune.matera.it/ is compliant with DCAT-AP-IT and deploys a CKAN web portal RDF enabled.
 
 ## 1- Downloading the whole catalog
-Instructions are available at https://github.com/ckan/ckanext-dcat#rdf-dcat-harvester 
--  to download all the catalog accessing http://dati.comune.matera.it/catalog.ttl saved OpenMateraDatasetCatalog.ttl
+Instructions are available at https://github.com/ckan/ckanext-dcat#rdf-dcat-harvester
+-  to download all the catalog, we can access http://dati.comune.matera.it/catalog.ttl and save it as  OpenMateraDatasetCatalog.ttl
 
- 
+
 ## 2- Preparing a SPARQL query to get the info in a CSV
 2.1 Yasgui https://yasgui.triply.cc/ provides a GUI for checking syntax and writing SPARQL queries.
 2.2 query available on GenerateDatasetwithDistributionFromDCAT.sparql
@@ -20,4 +20,4 @@ sparql --data OpenMateraDatasetCatalog.ttl   -query GenerateDatasetwithDistribut
 ```
 
 ## 4- Importing the CVS in Excel
-The excel file OpenMateraDatasetCleanedDistribution.xlsx  is generated via CSV importing with tab delimiters. 
+The excel file OpenMateraDatasetCleanedDistribution.xlsx  is generated via CSV importing with tab delimiters.

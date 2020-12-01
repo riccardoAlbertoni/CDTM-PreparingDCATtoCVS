@@ -5,7 +5,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 # More readable version of datasets
-SELECT  ?uri ?D_title  ?D_description ?D_creator_identifier ?D_creator_name  ?D_accrualPeriodicity ?D_identifier ?D_issued ?D_keyword ?D_theme  ?D_modified  ?D_publisher_identifier ?D_publisher_name ?D_rightsHolder_identifier ?D_rightsHolder_name  ?D_contactPoint_fn ?D_contactPoint_hasEmail_nonorm ?D_distribution ?D_landingPage ?Dist_description
+SELECT  distinct ?uri ?D_title  ?D_description ?D_creator_identifier ?D_creator_name  ?D_accrualPeriodicity ?D_identifier ?D_issued ?D_keyword ?D_theme  ?D_modified  ?D_publisher_identifier ?D_publisher_name ?D_rightsHolder_identifier ?D_rightsHolder_name  ?D_contactPoint_fn ?D_contactPoint_hasEmail_nonorm ?D_distribution ?D_landingPage ?Dist_description
    ?Dist_format ?Dist_license ?Dist_title ?Dist_accessURL WHERE {
   ?uri a dcat:Dataset ;
    dct:title ?D_title ;
