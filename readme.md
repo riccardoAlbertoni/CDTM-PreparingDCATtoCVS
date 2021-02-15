@@ -21,3 +21,12 @@ sparql --data OpenMateraDatasetCatalog.ttl   -query GenerateDatasetwithDistribut
 
 ## 4- Importing the CVS in Excel
 The excel file OpenMateraDatasetCleanedDistribution.xlsx  is generated via CSV importing with tab delimiters.
+
+# Steps to download metadata from ISTAT
+Catalog bulk available at https://serviziweb2.inps.it/odapi/bulk save it as istat.ttl
+
+## After Downloading exec the query
+
+```
+sparql --data ISTAT.ttl   -query GenerateDatasetwithDistributionFromDCAT.sparql --results=TSV > ISTATDatasetCleanedDistribution.csv
+```
