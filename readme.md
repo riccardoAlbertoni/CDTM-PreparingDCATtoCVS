@@ -22,9 +22,8 @@ sparql --data OpenMateraDatasetCatalog.ttl   -query GenerateDatasetwithDistribut
 ## 4- Importing the CVS in Excel
 The excel file OpenMateraDatasetCleanedDistribution.xlsx  is generated via CSV importing with tab delimiters.
 
-### 4.1- Manually added the description of Excel fields coping definition from https://www.w3.org/TR/vocab-dcat-2/ and formatting the first two rows differently.
-
-### 4.2- Replacing "file:///Users/bubu/Work/Experiment/CasaDelleTecnologie/CDTM-PreparingDCATtoCVS/" with "mailto:"
+- Manually added the description of Excel fields coping definition from https://www.w3.org/TR/vocab-dcat-2/ and formatting the first two rows differently.
+- Replacing "file:///Users/bubu/Work/Experiment/CasaDelleTecnologie/CDTM-PreparingDCATtoCVS/" with "mailto:"
 
 
 # Steps to download metadata from ISTAT
